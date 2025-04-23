@@ -4,7 +4,7 @@ void main() => runApp(CalApp());
 
 class CalApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return MaterialApp(
       home: Cal2(),
     );
