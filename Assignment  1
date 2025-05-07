@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: LoginRegisterPage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class LoginRegisterPage extends StatefulWidget {
+  const LoginRegisterPage({super.key});
+
+  @override
+  State<LoginRegisterPage> createState() => _LoginRegisterPageState();
+}
+
+class _LoginRegisterPageState extends State<LoginRegisterPage> {
+  // Controllers for registration
+  final nameController = TextEditingController();
+  final regUsernameController = TextEditingController();
+  final regPasswordController = TextEditingController();
+
+  // Controllers for login
+  final loginUsernameController = TextEditingController();
+  final loginPasswordController = TextEditingController();
+
+  // Stored credentials
+  String savedUsername = '';
+  String savedPassword = '';
+
+  void register() {
+    setState(() {
+      savedUsername = regUsernameController.text;
+      savedPassword = regPasswordController.text;
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Registered Successfully!')),
+    );
+  }
+
+  void login() {
+    if (loginUsernameController.text == savedUsername &&
+        loginPasswordController.text == savedPassword) {
+      showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(content: Text('Login Successful')),
+      );
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(content: Text('Invalid Credentials')),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login & Register')),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            const Text('Register', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            TextField(controller: nameController, decoration: const InputDecoration(labelText: 'Name')),
+            TextField(controller: regUsernameController, decoration: const InputDecoration(labelText: 'Username')),
+            TextField(controller: regPasswordController, obscureText: true, decoration: const InputDecoration(labelText: 'Password')),
+            ElevatedButton(onPressed: register, child: const Text('Register')),
+
+            const SizedBox(height: 30),
+            const Text('Login', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            TextField(controller: loginUsernameController, decoration: const InputDecoration(labelText: 'Username')),
+            TextField(controller: loginPasswordController, obscureText: true, decoration: const InputDecoration(labelText: 'Password')),
+            ElevatedButton(onPressed: login, child: const Text('Login')),
+          ],
+        ),
+      ),
+    );
+  }
+}
