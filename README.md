@@ -11,7 +11,7 @@ This repository contains my work from the Flutter UI Laboratory course at Ace En
 - Working with Flutter's widget tree
 - Creating calculator interfaces  
 - Using switch cases for conditional UI rendering  
-- Implementing lambda functions 
+- Implementing lambda functions  
 - File upload functionality
 - Input/output operations in Flutter
 - Working with icons and images in stateful widgets
