@@ -5,7 +5,7 @@ This repository contains my work from the Flutter UI Laboratory course at Ace En
 
 ## 🧠 What I've Learned
 - Creating responsive layouts for different screen sizes 
-- Building login and registration pages 
+- Building login and registration pages  
 - Implementing navigation between screens  
 - Designing stateful and stateless widgets 
 - Working with Flutter's widget tree
