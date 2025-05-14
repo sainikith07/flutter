@@ -7,7 +7,7 @@ This repository contains my work from the Flutter UI Laboratory course at Ace En
 - Creating responsive layouts for different screen sizes 
 - Building login and registration pages 
 - Implementing navigation between screens  
-- Designing stateful and stateless widgets
+- Designing stateful and stateless widgets 
 - Working with Flutter's widget tree
 - Creating calculator interfaces  
 - Using switch cases for conditional UI rendering
