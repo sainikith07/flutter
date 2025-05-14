@@ -9,7 +9,7 @@ This repository contains my work from the Flutter UI Laboratory course at Ace En
 - Implementing navigation between screens
 - Designing stateful and stateless widgets
 - Working with Flutter's widget tree
-- Creating calculator interfaces
+- Creating calculator interfaces 
 - Using switch cases for conditional UI rendering
 - Implementing lambda functions
 - File upload functionality
