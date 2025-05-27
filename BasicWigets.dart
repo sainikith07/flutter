@@ -8,34 +8,58 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.teal),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal,
+            foregroundColor: Colors.white,
+          ),
+        ),
+      ),
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("Simple UI"),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               child: Text(
-                "Hello",
-                style: TextStyle(fontSize: 24),
+                "Welcome!",
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),
             Container(
-              height: 100,
-              width: 100,
+              height: 120,
+              width: 120,
+              margin: EdgeInsets.symmetric(vertical: 20),
               child: Image.asset('assets/images/img1.jpeg'),
             ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                    ),
-                    child: Text("Click"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("Button A pressed");
+                    },
+                    child: Text("Button A"),
                   ),
-                ],
-              ),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("Button B pressed");
+                    },
+                    child: Text("Button B"),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
