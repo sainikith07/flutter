@@ -54,7 +54,8 @@ Feel free to explore the code and provide feedback!
 GitHub: [https://github.com/sainikith07](https://github.com/sainikith07)
 
 ## 📧 Contact
-If you have any questions or would like to collaborate, please feel free to reach out to me through GitHub.
+If you have any questions or would like to collaborate, please feel free to reach out to me through GitHub.or 
+mail to:
 sainikith04@gmail.com
 ---
 
