@@ -55,7 +55,7 @@ GitHub: [https://github.com/sainikith07](https://github.com/sainikith07)
 
 ## 📧 Contact
 If you have any questions or would like to collaborate, please feel free to reach out to me through GitHub.
-
+sainikith04@gmail.com
 ---
 
 *This repository is part of my coursework for Flutter UI Laboratory at Ace Engineering College.* ⭐
